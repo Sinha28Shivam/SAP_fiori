@@ -1,0 +1,112 @@
+<mvc:View controllerName="firs.firstproject.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" title="{i18n>Image Display}">
+        <content>
+       <VBox id="_IDGenVBox1">
+         <!-- <Text id="text1" text="hello" />
+       
+        <Button id="button" text="Press me" /> -->
+ <Text id="text2" text="{i18n>title}"/>
+
+   <!-- this is the general way of adding children: use the aggregation name -->
+       <!-- <Image id="image" src = "Images/certtech.png" width = "800px" height = "500px"/> -->
+       <!-- <Image id="image2" src="http://www.sap.com/global/ui/images/global/sap-logo.png"/> -->
+
+
+         <!-- <Button id="Button" text="Press Me"/> -->
+         <!-- <Button id="bt1" text="Say Hi!" enabled="true" type="Success" press="onShowHello"/> -->
+         <Text id="text3" text="This is a XML View" class="mycss"/>
+         <CheckBox id="checkBox" text="No" select="onCBselect"/>
+
+         <mvc:JSView id="idJSView" viewName="firs.firstproject.view.MyJSView" />
+
+
+
+        <f:SimpleForm id="_IDGenSimpleForm1" layout="ResponsiveGridLayout" editable="true">
+          <f:content>
+          <core:Title id="_IDGenTitle1" text="Enter your name and address" />
+          <Label id="_IDGenLabel1" text="Name">
+          <layoutData><l:GridData id="_IDGenGridData1" span="L2 M4 S12"/></layoutData>
+          </Label>
+          <Input id="_IDGenInput1">
+          <layoutData><l:GridData id="_IDGenGridData2" span="L10 M8 S12"/></layoutData>
+          </Input>
+
+          <Label id="_IDGenLabel2" text="Address">
+          <layoutData><l:GridData id="_IDGenGridData3" span="L2 M4 S12"/></layoutData>
+          </Label>
+          <Input id="_IDGenInput2">
+          <layoutData><l:GridData id="_IDGenGridData4" span="L10 M8 S12"/></layoutData>
+          </Input>
+          <Button id="_IDGenButton4" text="Submit" press="onSubmit">
+          <layoutData><l:GridData id="_IDGenGridData5"
+          indent="M4"
+           span="L2 M8 S12"/></layoutData>
+          </Button>
+          </f:content>
+          <f:title>
+          <core:Title id="_IDGenTitle2" text="Simple form using XMl"/>
+          </f:title>
+        </f:SimpleForm>
+
+
+
+
+          <Input id="_IDGenInput3" value="{/name}" valueLiveUpdate="true" enabled="{/enabled}"/>
+          <Text id="_IDGenText3" text="{/name}"/>
+
+          <Input id="_IDGenInput4" value="{/address}" valueLiveUpdate="true" enabled="{/enabled}"/>
+          <Text id="_IDGenText4" text="{/address}"/>
+          <HBox id="_IDGenHBox3">
+          <RadioButton id="_IDGenRadioButton1" groupName="sapMRbDefaultGroup" selected="{/enabled}" text="change"></RadioButton>
+          <RadioButton id="_IDGenRadioButton2" groupName="sapMRbDefaultGroup" text="Display"></RadioButton>
+          </HBox>
+
+          <core:Fragment id="idXMLFrag" fragmentName="firs.firstproject.view.MyXMLFrag" type="XML"/>
+          <!-- <core:Fragment id="idXMLFrag1" fragmentName="firs.firstproject.view.Dialogfrag" type="XML"/> -->
+
+          <List id="list1" items="{myjson>/product}">
+          <items>
+          <StandardListItem id="_IDGenStandardListItem1" title="{myjson>ProductName}" 
+          description="{parts : ['myjson>QuantityPerUnit','myjson>UnitPrice','myjson>UnitsInStock'],
+                              formatter: '.myformatter.reqText'}"/>
+          
+
+          
+          </items>
+          
+          
+          </List>
+
+         </VBox>
+        </content>
+
+        <footer>
+        <Toolbar id="_IDGenToolbar1" height="100px" style="Standard">
+        <content>
+        <VBox id="_IDGenHBox1" >
+        <HBox id="_IDGenHBox2">
+        <Button id="_IDGenButton1" text="success" type="Success" press="onShowText"/>
+        <Button id="_IDGenButton2" text="Failure" type="Reject" press="onShowText1" />
+        <Button id="_IDGenButton3" text="Failure" type="Reject" press="onSuccess" />
+          
+        </HBox>
+       <Button id="ButtonNo5" text="Open Dialog" press="openDialog" />
+    <Text id="_IDGenText1" text="Disclaimer :"/>
+    <Text id="_IDGenText2" text="This application is under the development, use at your own risk." />
+  </VBox>
+
+        </content>
+
+        </Toolbar>
+
+
+        </footer>
+
+
+    </Page>
+</mvc:View>

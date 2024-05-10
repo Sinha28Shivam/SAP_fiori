@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+<l:HorizontalLayout id="_IDGenHorizontalLayout1">
+<l:content>
+<Input id="input1" />
+<Button id="button6" text="Press the button" press="onButton4" />
+<Text id="text5"/>
+
+
+</l:content>
+</l:HorizontalLayout>
+
+
+
+
+
+</core:FragmentDefinition>

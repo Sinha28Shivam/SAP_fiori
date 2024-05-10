@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" 
+xmlns:core="sap.ui.core" 
+xmlns:l="sap.ui.layout"
+xmlns:f="sap.ui.layout.form">
+
+<Dialog id="idDialog" title="My Dialog Box">
+<buttons>
+<Button id="ButtonNo78" press="onCloseDialog" text="ok" />
+</buttons>
+<content>
+<f:SimpleForm id="_IDGenSimpleForm5" >
+<f:content>
+<Label id="Label1" text="Are you enjoying learning sapui5 tech"/>
+<Input id="inputin1" />
+</f:content>
+</f:SimpleForm>
+</content>
+</Dialog>
+
+</core:FragmentDefinition>
